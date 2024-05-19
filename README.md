@@ -1,13 +1,17 @@
-# Welcome to Remix + Vite!
+# Remix with React 19
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/guides/vite) for details on supported features.
+following this guide https://react.dev/blog/2024/04/25/react-19-upgrade-guide
+
+You can also check out this branch where I was playing with the hydration errors in React 19:
+
+- https://github.com/JLarky/remix-react-19-template/commits/hydration-errors-demo/
 
 ## Development
 
 Run the Vite dev server:
 
 ```shellscript
-npm run dev
+bun dev
 ```
 
 ## Deployment
@@ -15,13 +19,13 @@ npm run dev
 First, build your app for production:
 
 ```sh
-npm run build
+bun run build
 ```
 
 Then run the app in production mode:
 
 ```sh
-npm start
+bun start
 ```
 
 Now you'll need to pick a host to deploy it to.
@@ -30,7 +34,7 @@ Now you'll need to pick a host to deploy it to.
 
 If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `bun build`
 
 - `build/server`
 - `build/client`
