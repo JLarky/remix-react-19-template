@@ -8,11 +8,18 @@ import { RemixBrowser } from "@remix-run/react";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 
-startTransition(() => {
-  hydrateRoot(
-    document,
-    <StrictMode>
-      <RemixBrowser />
-    </StrictMode>
-  );
-});
+const div = document.createElement("div");
+div.textContent = "Loading...";
+// document.body.insertBefore(div, document.body.firstChild); // will still break
+document.body.appendChild(div);
+
+setTimeout(() => {
+  startTransition(() => {
+    hydrateRoot(
+      document,
+      <StrictMode>
+        <RemixBrowser />
+      </StrictMode>
+    );
+  });
+}, 1000);
